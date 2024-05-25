@@ -1,10 +1,11 @@
-function Sum(n) {
-  let resultAfterSum = 0;
-  if (n == 1) {
-    return n;
+function RecursiveSum(n) {
+  let sum = 0;
+  if (n === 10) {
+    return 10;
   }
-  resultAfterSum = n + Sum(n - 1);
-  return resultAfterSum;
+  sum = n + RecursiveSum(n + 1);
+  return sum;
 }
-const reslut = Sum(10);
-console.log(reslut)
+
+let result = RecursiveSum(1);
+console.log(result);
