@@ -85,7 +85,7 @@ console.log(Kleftresult); // Output: [4, 5, 6, 1, 2, 3]
 function KthRigbtRotation(array, k) {
   for (let i = 1; i <= k; i++) {
     let temp = array[array.length - 1];
-    for (let j = array.length-1; j >= 0; j--) {
+    for (let j = array.length - 1; j >= 0; j--) {
       array[j] = array[j - 1];
     }
     array[0] = temp;
@@ -96,6 +96,18 @@ function KthRigbtRotation(array, k) {
 const kRightResult = KthRigbtRotation([3, 4, 5, 6, 7, 8, 9], 3);
 console.log(kRightResult);
 
-function toLowerCase(str){
-    
+function toLowerCase(str) {
+  let lowerstr = "";
+  for (let i = 0; i < str.length; i++) {
+    let charcode = str.charCodeAt(i);
+
+    if (charcode >= 65 && charcode <= 90) {
+      charcode += 32;
+    }
+    lowerstr += String.fromCharCode(charcode);
+  }
+  return lowerstr;
 }
+
+const lowerresult = toLowerCase("DONEX");
+console.log(lowerresult);
