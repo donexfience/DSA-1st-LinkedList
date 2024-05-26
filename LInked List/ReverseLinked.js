@@ -49,7 +49,7 @@ class LinkedList {
       console.log(listNodes);
     }
   }
-  Reverse() {
+  Reverese() {
     let prev = null;
     let current = this.head;
     while (current) {
@@ -60,6 +60,7 @@ class LinkedList {
     }
     this.head = prev;
   }
+
 }
 const list = new LinkedList();
 list.append(10);
@@ -67,5 +68,5 @@ list.append(20);
 list.prepend(30);
 list.prepend(40);
 list.print();
-list.Reverse();
+list.Reverese();
 list.print();
